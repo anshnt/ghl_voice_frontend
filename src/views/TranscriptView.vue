@@ -91,15 +91,45 @@ onMounted(loadTranscript);
 
 <style scoped>
 .transcript-grid {
-  align-items: start;
-  grid-template-columns: minmax(0, 1fr) 340px;
+  display: grid;
+  grid-template-columns: 1fr 340px;
 }
 
 .sidebar {
-  display: grid;
-  gap: 12px;
-  position: sticky;
-  top: 76px;
+  background: var(--surface-soft);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px;
+}
+
+.sidebar .section-title {
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.sidebar .insight-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  margin-bottom: 0;
+}
+
+.sidebar .insight-card h3 {
+  color: var(--text);
+}
+
+.sidebar .insight-card p {
+  color: var(--muted);
+}
+
+.sidebar .empty-state {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  text-align: center;
 }
 
 @media (max-width: 900px) {
