@@ -351,7 +351,7 @@ onUnmounted(() => {
 }
 
 .score-strip {
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   margin-bottom: 18px;
 }
 

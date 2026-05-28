@@ -21,28 +21,32 @@ const trendClass = computed(() => ['trend', props.tone]);
 
 <style scoped>
 .score-card {
-  min-height: 126px;
-  padding: 18px;
+  min-height: 104px;
+  padding: 14px 16px;
 }
 
 .label {
   color: #64748b;
   display: block;
-  font-size: 13px;
-  font-weight: 700;
-  margin-bottom: 12px;
+  font-size: 12px;
+  font-weight: 800;
+  margin-bottom: 8px;
 }
 
 strong {
   display: block;
-  font-size: 30px;
-  line-height: 1;
-  margin-bottom: 12px;
+  font-size: clamp(19px, 1.6vw, 24px);
+  letter-spacing: 0;
+  line-height: 1.08;
+  margin-bottom: 8px;
+  overflow-wrap: anywhere;
 }
 
 .trend {
   color: #3b82f6;
-  font-size: 13px;
+  display: block;
+  font-size: 12px;
+  line-height: 1.3;
 }
 
 .trend.good {
