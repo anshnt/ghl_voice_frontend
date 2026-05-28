@@ -26,7 +26,7 @@ const trendClass = computed(() => ['trend', props.tone]);
 }
 
 .label {
-  color: #64748b;
+  color: var(--muted);
   display: block;
   font-size: 12px;
   font-weight: 800;
@@ -43,21 +43,21 @@ strong {
 }
 
 .trend {
-  color: #3b82f6;
+  color: var(--accent);
   display: block;
   font-size: 12px;
   line-height: 1.3;
 }
 
 .trend.good {
-  color: #22c55e;
+  color: var(--success);
 }
 
 .trend.critical {
-  color: #ef4444;
+  color: var(--danger);
 }
 
 .trend.warning {
-  color: #f59e0b;
+  color: var(--warning);
 }
 </style>

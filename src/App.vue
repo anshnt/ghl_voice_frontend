@@ -9,6 +9,7 @@
         <RouterLink to="/">Overview</RouterLink>
         <RouterLink to="/reports">Reports</RouterLink>
         <RouterLink to="/insights">Insights</RouterLink>
+        <RouterLink to="/assistant">AI Assistant</RouterLink>
       </nav>
       <div class="sidebar-footer">
         <span class="status-dot"></span>

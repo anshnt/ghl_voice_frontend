@@ -92,7 +92,7 @@ onMounted(loadInsights);
 
 .review-row {
   align-items: center;
-  border-bottom: 1px solid #e7ecf4;
+  border-bottom: 1px solid var(--border);
   display: flex;
   gap: 12px;
   justify-content: space-between;
@@ -109,7 +109,7 @@ onMounted(loadInsights);
 }
 
 .review-row a span {
-  color: #64748b;
+  color: var(--muted);
   font-size: 13px;
 }
 
@@ -120,21 +120,21 @@ onMounted(loadInsights);
 }
 
 .signal-card {
-  background: #f8fbff;
-  border: 1px solid #dfe5ef;
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
   border-radius: 8px;
   padding: 14px;
 }
 
 .signal-card span {
-  color: #ef4444;
+  color: var(--danger);
   display: block;
   font-size: 22px;
   font-weight: 900;
 }
 
 .signal-card p {
-  color: #64748b;
+  color: var(--muted);
   font-size: 13px;
   margin: 6px 0 0;
 }

@@ -112,6 +112,16 @@ Chart.register(
   Tooltip
 );
 
+const CHART_COLORS = {
+  primary: '#312E81',
+  accent: '#06B6D4',
+  lavender: '#F5F3FF',
+  danger: '#DC2626',
+  warning: '#D97706',
+  success: '#059669',
+  muted: '#6B6888'
+};
+
 const summary = ref({ avg_score: 0, pass_rate: 0, analyzed_count: 0, top_failures: [] });
 const agents = ref([]);
 const calls = ref([]);
@@ -187,12 +197,12 @@ function renderAgentChart() {
         {
           label: 'Avg score',
           data: agents.value.map((agent) => Number(agent.avg_score || 0)),
-          backgroundColor: '#3b82f6'
+          backgroundColor: CHART_COLORS.primary
         },
         {
           label: 'Pass rate',
           data: agents.value.map((agent) => Number(agent.pass_rate || 0) / 10),
-          backgroundColor: '#22c55e'
+          backgroundColor: CHART_COLORS.accent
         }
       ]
     },
@@ -221,15 +231,15 @@ function renderTrendChart() {
         {
           label: 'Avg score',
           data: trend.map((item) => Number(item.avg_score || 0)),
-          borderColor: '#3b82f6',
-          backgroundColor: 'rgba(59, 130, 246, 0.12)',
+          borderColor: CHART_COLORS.primary,
+          backgroundColor: 'rgba(49, 46, 129, 0.12)',
           tension: 0.32
         },
         {
           label: 'Pass rate / 10',
           data: trend.map((item) => Number(item.pass_rate || 0) / 10),
-          borderColor: '#22c55e',
-          backgroundColor: 'rgba(34, 197, 94, 0.12)',
+          borderColor: CHART_COLORS.accent,
+          backgroundColor: 'rgba(6, 182, 212, 0.14)',
           tension: 0.32
         }
       ]
@@ -257,7 +267,13 @@ function renderFailureChart() {
         {
           label: 'Failures',
           data: failures.map((item) => item.count),
-          backgroundColor: ['#ef4444', '#f59e0b', '#3b82f6', '#22c55e', '#64748b']
+          backgroundColor: [
+            CHART_COLORS.danger,
+            CHART_COLORS.warning,
+            CHART_COLORS.primary,
+            CHART_COLORS.accent,
+            CHART_COLORS.muted
+          ]
         }
       ]
     },
@@ -280,7 +296,7 @@ function renderDistributionChart() {
         {
           label: 'Calls',
           data: distribution.map((item) => item.count),
-          backgroundColor: '#f59e0b'
+          backgroundColor: CHART_COLORS.accent
         }
       ]
     },
@@ -329,7 +345,7 @@ onUnmounted(() => {
 
 <style scoped>
 .header-metric {
-  background: #172033;
+  background: var(--primary);
   border-radius: 8px;
   color: #ffffff;
   min-width: 150px;
@@ -337,7 +353,7 @@ onUnmounted(() => {
 }
 
 .header-metric span {
-  color: #b6c2d3;
+  color: #ddd8ff;
   display: block;
   font-size: 12px;
   font-weight: 800;
@@ -387,7 +403,7 @@ onUnmounted(() => {
 
 .agent-row {
   align-items: center;
-  border-bottom: 1px solid #e7ecf4;
+  border-bottom: 1px solid var(--border);
   display: flex;
   gap: 14px;
   justify-content: space-between;
@@ -409,7 +425,7 @@ onUnmounted(() => {
 }
 
 .agent-row a span {
-  color: #64748b;
+  color: var(--muted);
   font-size: 13px;
   margin-top: 2px;
 }
@@ -422,18 +438,18 @@ onUnmounted(() => {
 }
 
 .risk-pill.priority {
-  background: rgba(239, 68, 68, 0.13);
-  color: #b91c1c;
+  background: rgba(220, 38, 38, 0.12);
+  color: var(--danger);
 }
 
 .risk-pill.watch {
-  background: rgba(245, 158, 11, 0.16);
-  color: #b45309;
+  background: rgba(217, 119, 6, 0.14);
+  color: var(--warning);
 }
 
 .risk-pill.healthy {
-  background: rgba(34, 197, 94, 0.13);
-  color: #15803d;
+  background: rgba(5, 150, 105, 0.12);
+  color: var(--success);
 }
 
 .recommendation-stack {

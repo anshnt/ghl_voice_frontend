@@ -14,18 +14,22 @@ defineProps({
 
 <style scoped>
 .insight-card {
-  padding: 16px;
+  border-radius: 8px;
+  padding: 14px 16px;
 }
 
 h3 {
-  font-size: 15px;
-  line-height: 1.35;
-  margin: 12px 0 8px;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 10px 0 6px;
 }
 
 p {
-  color: #475569;
-  font-size: 14px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
   margin: 0;
 }
 </style>

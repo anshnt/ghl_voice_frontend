@@ -32,8 +32,8 @@ function toggle() {
 
 <style scoped>
 .message {
-  background: #ffffff;
-  border: 1px solid #dfe5ef;
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-left: 4px solid transparent;
   border-radius: 8px;
   margin-bottom: 10px;
@@ -50,17 +50,17 @@ function toggle() {
 }
 
 .failure {
-  border-left-color: #ef4444;
+  border-left-color: var(--danger);
   cursor: pointer;
 }
 
 .use-action {
-  border-left-color: #f59e0b;
+  border-left-color: var(--warning);
   cursor: pointer;
 }
 
 .speaker {
-  color: #64748b;
+  color: var(--muted);
   display: block;
   font-size: 12px;
   font-weight: 800;
@@ -72,7 +72,7 @@ p {
 }
 
 .tooltip {
-  background: #172033;
+  background: var(--primary);
   border-radius: 8px;
   color: #ffffff;
   font-size: 13px;

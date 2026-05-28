@@ -36,3 +36,13 @@ export async function fetchTranscript(id) {
   const response = await api.get(`/transcripts/${id}`);
   return response.data.transcript;
 }
+
+export async function fetchAiSuggestions() {
+  const response = await api.get('/ai/suggestions');
+  return response.data.suggestions;
+}
+
+export async function askAiQuestion(question) {
+  const response = await api.post('/ai/chat', { question });
+  return response.data.answer;
+}
