@@ -24,7 +24,7 @@ h3 {
 }
 
 p {
-  color: #475569;
+  color: var(--muted);
   font-size: 14px;
   margin: 0;
 }

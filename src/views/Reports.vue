@@ -118,27 +118,27 @@ onMounted(loadReports);
 .benchmark-row + .benchmark-row,
 .failure-row + .failure-row,
 .snapshot-list div + div {
-  border-top: 1px solid #e7ecf4;
+  border-top: 1px solid var(--border);
 }
 
 .benchmark-row span,
 .failure-row span,
 dt {
-  color: #64748b;
+  color: var(--muted);
   display: block;
   font-size: 13px;
 }
 
 .meter,
 .bar-track {
-  background: #e8eef7;
+  background: #ebe7ff;
   border-radius: 999px;
   height: 8px;
   overflow: hidden;
 }
 
 .meter span {
-  background: #22c55e;
+  background: var(--accent);
   display: block;
   height: 100%;
 }
@@ -152,7 +152,7 @@ dt {
 }
 
 .bar-track i {
-  background: #3b82f6;
+  background: var(--primary);
   display: block;
   height: 100%;
 }

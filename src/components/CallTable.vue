@@ -109,14 +109,14 @@ table {
 
 th,
 td {
-  border-bottom: 1px solid #e7ecf4;
+  border-bottom: 1px solid var(--border);
   padding: 12px 14px;
   text-align: left;
   white-space: nowrap;
 }
 
 th {
-  color: #64748b;
+  color: var(--muted);
   cursor: pointer;
   font-size: 12px;
   letter-spacing: 0;
@@ -128,16 +128,16 @@ tbody tr {
 }
 
 tbody tr:hover {
-  background: #f8fbff;
+  background: var(--surface-soft);
 }
 
 .agent-link {
-  color: #2563eb;
+  color: var(--primary);
   font-weight: 800;
 }
 
 .open-link {
-  color: #3b82f6;
+  color: var(--accent);
   font-weight: 700;
 }
 </style>

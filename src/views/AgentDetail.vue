@@ -89,7 +89,7 @@ onMounted(loadAgent);
 
 <style scoped>
 .back-link {
-  color: #3b82f6;
+  color: var(--accent);
   font-weight: 800;
 }
 
@@ -100,7 +100,7 @@ onMounted(loadAgent);
 
 .criterion-row {
   align-items: center;
-  border-bottom: 1px solid #e7ecf4;
+  border-bottom: 1px solid var(--border);
   display: flex;
   gap: 16px;
   justify-content: space-between;
@@ -117,13 +117,13 @@ onMounted(loadAgent);
 }
 
 .criterion-row p {
-  color: #64748b;
+  color: var(--muted);
   font-size: 13px;
   margin: 0;
 }
 
 .criterion-row span {
-  color: #172033;
+  color: var(--text);
   font-weight: 900;
   white-space: nowrap;
 }
